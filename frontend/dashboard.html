@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Análise de Contratos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Sistema de Análise de Contratos</h1>
+            <div class="user-info">
+                <span id="welcomeUser">Bem-vindo!</span>
+                <button onclick="logout()" class="btn btn-secondary">Sair</button>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <h2>Upload de Contrato</h2>
+                <div class="upload-form">
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="file-upload">
+                            <input type="file" id="contractFile" accept=".pdf,.docx" required>
+                            <label for="contractFile" class="file-label">
+                                <div class="file-icon">📁</div>
+                                <span>Selecione um arquivo (PDF ou DOCX)</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Analisar Contrato</button>
+                    </form>
+                    <div id="uploadProgress" class="progress-container" style="display: none;">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <p>Analisando contrato com IA...</p>
+                    </div>
+                    <div id="uploadError" class="error-message" style="display: none;"></div>
+                </div>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>Resultado da Análise</h2>
+                <div class="contract-analysis" id="contractAnalysis">
+                    
+                </div>
+            </div>
+
+            <div class="search-section">
+                <h2>Buscar Contrato</h2>
+                <div class="search-form">
+                    <input type="text" id="searchInput" placeholder="Digite o nome do arquivo do contrato">
+                    <button onclick="searchContract()" class="btn btn-secondary">Buscar</button>
+                </div>
+                <div id="searchResults" class="search-results"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
