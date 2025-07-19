@@ -29,7 +29,7 @@ services:
     environment:
       DATABASE_URL: postgresql://postgres:postgres123@postgres:5432/contracts_db
       SECRET_KEY: bpqR64IxFS1E5o-SI6HvaMgbonmN53DKM-IAdexoon4
-      GEMINI_API_KEY: AIzaSyAycTAwKwplaRW8NV73o3PXYIspW4u1cYE
+      GEMINI_API_KEY: sua chave gemini aqui
     ports:
       - "8000:8000"
     volumes:
